@@ -1,24 +1,30 @@
 #include <stdio.h>
-/**
- * main - program that prints numbers from 0 to 99.
- * Return: 0
- */
 
+/**
+ * main - Print numbers from 00 to 99
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	int c = 0;
+	int tens;
+	int ones;
 
-	while (c <= 99)
+	for (tens = 0; tens <= 9; tens++)
 	{
-		putchar(c / 10 + '0');
-		putchar(c % 10 + '0');
-		if (c != 99)
+		for (ones = 0; ones <= 9; ones++)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(tens + '0');
+			putchar(ones + '0');
+
+			if (!(tens == 9 && ones == 9))
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
-		c++;
 	}
 	putchar('\n');
+
 	return (0);
 }
