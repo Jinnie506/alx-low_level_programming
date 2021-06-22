@@ -2,6 +2,7 @@
 #include "holberton.h"
 
 /**
+ *main - Starting point
  *printFibonacciNumbers - function that prints first 50 Fibonacci Numbers
  *Return 0
  *@n: int argument
@@ -25,4 +26,9 @@ void printFibonacciNumbers(void)
 		f1 = f2;
 		f2 = next;
 	}
+}
+int main()
+{
+	printFibonacciNumbers(7);
+	return 0;
 }
