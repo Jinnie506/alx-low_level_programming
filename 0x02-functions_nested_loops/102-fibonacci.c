@@ -10,7 +10,7 @@
 
 void printFibonacciNumbers(void)
 {
-	long int f1 = 0;
+	long int f1 = 1;
 
 	long int f2 = 1;
 
