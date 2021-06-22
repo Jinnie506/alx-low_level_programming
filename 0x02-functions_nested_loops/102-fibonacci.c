@@ -29,6 +29,6 @@ void printFibonacciNumbers(void)
 }
 int main()
 {
-	printFibonacciNumbers(7);
+	printFibonacciNumbers();
 	return 0;
 }
