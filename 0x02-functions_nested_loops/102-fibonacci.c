@@ -10,17 +10,17 @@
 
 void printFibonacciNumbers(void)
 {
-	int f1 = 0;
+	long int f1 = 0;
 
-	int f2 = 1;
+	long int f2 = 1;
 
 	int i;
 
-	int next;
+	long int next;
 
 	for (i = 1; i < 50; i++)
 	{
-		printf("%d ", f2);
+		printf("%ld, ", f2);
 		next = f1 + f2;
 
 		f1 = f2;
