@@ -9,27 +9,25 @@
 
 int _atoi(char *s)
 {
-	int sign = 1, number = 0, index = 0;
+	int i, j, n, m;
 
-	if (s[0] == '-')
-	{
-		sign = -1;
-		index = 1;
-	}
+	i = n = 0;
 
-	while (s[index] != '\0')
+	m = 1;
+
+	while ((*(s + i) < '0' || *(s + i) > '9') && (*(s + i) != '\0'))
 	{
-		if(s[index] >= '0' && s[index] <= '9')
+		if (*(s + i) == '-')
 		{
-			number = number * 10 + s[index] - '0';
+			m *= -1;
 		}
-		else
-		{
-			break;
-		}
-		index++;
+		i++;
 	}
-	/* multiply number with sign to make it negative number if sign < 0*/
-	number = number * sign;
-	return (number);
+	j = i;
+	while ((*(s + j) >= '0') && (*(s + j) <= '9'))
+	{
+		n = n * 10 + m * (*(s + j) - '0');
+		j++;
+	}
+	return (n);
 }
