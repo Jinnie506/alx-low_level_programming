@@ -1,3 +1,4 @@
-#ifndef SUM
+#ifndef DOUBLESUMGUARD
+#define DOUBLESUMGUARD
 #define SUM(x, y) (x + y)
 #endif /* #ifndef SUM */
