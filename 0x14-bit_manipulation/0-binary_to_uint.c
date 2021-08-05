@@ -19,12 +19,11 @@ unsigned int binary_to_uint(const char *b)
 	len -= 1;
 
 	/* iterate string and if '1' then multiply by power of 2 */
-	/* get power of 2 via binary (e.g. 1<<2 = 100 in binary = 4) */
 	i = 0;
 	while (b[i])
 	{
 		if ((b[i] != '0') && (b[i] != '1'))
-			return (sum);
+			return (0);
 
 		if (b[i] == '1')
 			sum += (1 * (1 << len));
